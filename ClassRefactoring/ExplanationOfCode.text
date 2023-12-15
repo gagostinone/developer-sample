@@ -1,0 +1,15 @@
+1. File Structure:
+
+I've reorganized the classes into folders like Enums, Exceptions, Factories, and Swallow to improve maintainability and scalability. This clearer, modular structure makes the codebase easier to understand, navigate, and manage.
+
+2. Custom Exceptions:
+
+I created specific exceptions like UnsupportedSwallowLoadException and UnsupportedSwallowTypeException to provide clear, specific feedback in error scenarios. This approach allows for more precise error handling and straightforward debugging.
+
+3. Swallow Class Hierarchy:
+
+I aligned with the Single Responsibility Principle (SRP) by redesigning the Swallow class structure. The ISwallow interface now defines the general behaviors for swallows, while Swallow has been made an abstract class to share common properties and methods. The EuropeanSwallow and AfricanSwallow subclasses encapsulate their specific behaviors.
+
+4. Factory Pattern Implementation:
+
+In the refactoring, instead of just creating generic Swallow objects, the factory now differentiates and creates either AfricanSwallow or EuropeanSwallow objects based on the need. This change means that the code can easily handle the unique properties and behaviors of each swallow type without complicating the code that needs a swallow object.
